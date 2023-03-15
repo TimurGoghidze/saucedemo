@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SauceDemo.java" afterDir="false" />
+    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="Test First">
+      <change afterPath="$PROJECT_DIR$/src/main/java/InventoryPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SauceDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SauceDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +37,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2N3VMJP89ohUvBufo18xZboofQX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,10 +47,31 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.LoginTests.loginWithValidData">
+    <configuration name="LoginTests.loginWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saucedemo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTests" />
+      <option name="METHOD_NAME" value="loginWithValidData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SauceDemo.loginWithInvalidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saucedemo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SauceDemo" />
+      <option name="METHOD_NAME" value="loginWithInvalidData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SauceDemo.loginWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saucedemo" />
       <option name="PACKAGE_NAME" value="" />
@@ -62,6 +84,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoginTests.loginWithValidData" />
+        <item itemvalue="JUnit.SauceDemo.loginWithInvalidData" />
         <item itemvalue="JUnit.SauceDemo.loginWithValidData" />
       </list>
     </recent_temporary>
@@ -75,6 +99,18 @@
       <option name="presentableId" value="Default" />
       <updated>1678892703433</updated>
     </task>
+    <task id="LOCAL-00001" summary="Test First">
+      <created>1678895226333</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678895226333</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test First" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test First" />
   </component>
 </project>
