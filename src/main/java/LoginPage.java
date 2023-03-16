@@ -19,18 +19,21 @@ public class LoginPage {
 
     @FindBy (id="login-button")
     WebElement buttonLogin;
+    @FindBy (tagName = "h3")
+    WebElement errorMessage;
 
 //далее надо это проинициализировать -> вывести конструктор этого класса
 //при инициализации передаем драйвер в () драйвер это пульт управления браузером
 
-    public LoginPage (WebDriver driver){
-        this.driver = driver; // инициализация  protected WebDriver driver и ему назначаем driver кот. прийдет извне
-        PageFactory.initElements(driver, this); // передаём то, что здесь есть
-    }
+public LoginPage (WebDriver driver){
+    this.driver = driver; // инициализация  protected WebDriver driver и ему назначаем driver кот. прийдет извне
+    PageFactory.initElements(driver, this); // передаём то, что здесь есть = constructor без неё тесты завалятся
+}
 
-    public void login(String usernameParam, String passwordParam){
-        userName.sendKeys(usernameParam);
-        password.sendKeys(passwordParam);
+
+    public void login(User user){
+        userName.sendKeys(user.getName());
+        password.sendKeys(user.getPassword());
         buttonLogin.click();
 
 

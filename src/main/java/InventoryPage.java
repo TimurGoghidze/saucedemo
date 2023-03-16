@@ -13,7 +13,9 @@ public class InventoryPage {
     WebElement inventoryList;
 
     public InventoryPage(WebDriver driver) {//Generate constructor
-        this.driver = driver;
+        this.driver = driver;//указатель на этот класс
         PageFactory.initElements(driver,this);
     }
+
+
 }
