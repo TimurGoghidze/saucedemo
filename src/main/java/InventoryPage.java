@@ -3,19 +3,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class InventoryPage {
+import static org.junit.Assert.assertTrue;
+
+public class InventoryPage extends BasePage {
     protected WebDriver driver;
 
     @FindBy(className = "title")
-    WebElement product;
+   private WebElement product;
 
     @FindBy(id = "react-burger-menu-btn")
-    WebElement inventoryList;
+    private WebElement inventoryList;
 
-    public InventoryPage(WebDriver driver) {//Generate constructor
-        this.driver = driver;//указатель на этот класс
-        PageFactory.initElements(driver,this);
+    public InventoryPage(WebDriver driver) {
+        super(driver);
+
+//        this.driver = driver;//указатель на этот класс //Generate constructor
+//        PageFactory.initElements(driver,this);
     }
-
+    public void inventoryListShouldBeDisplayed(){
+        assertTrue(inventoryList.isDisplayed());
+    }
 
 }

@@ -23,8 +23,8 @@ public class TestBase {
     public void tearDown() {
         driver.quit();
     }
-    String validusername = "standard_user";
-    String validpassword = "secret_sauce";
+    String validUsername = "standard_user";
+    String validPassword = "secret_sauce";
 
     String lockedOutUsername = "locked_out_user";
 
