@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import static org.junit.Assert.assertTrue;
 
 public class InventoryPage extends BasePage {
-    protected WebDriver driver;
+   // protected WebDriver driver; //он в BasePage
 
     @FindBy(className = "title")
    private WebElement product;

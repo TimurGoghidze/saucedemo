@@ -16,8 +16,8 @@
         <selenide.version>6.11.2</selenide.version>
         <aspectj.version>1.8.10</aspectj.version>
 
-        <allure.maven.version>2.9</allure.maven.version>
-        <maven.surefire>3.0.0-M7</maven.surefire>
+        <allure.maven.version>2.10.00</allure.maven.version>
+        <maven.surefire>2.22.2</maven.surefire>
         <maven.compiler>3.7.0</maven.compiler>
         <allure.results.directory>allure-results</allure.results.directory>
     </properties>
@@ -49,6 +49,14 @@
             <version>2.20.0</version>
 
         </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-java-commons</artifactId>
+            <version>2.20.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
