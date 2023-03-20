@@ -24,6 +24,11 @@ public class InventoryPageTests extends TestBase {
         new LoginPage(driver).login(user).inventoryListShouldBeDisplayed();
         InventoryPage inventoryPage = new InventoryPage(driver);
         inventoryPage.checkTwitterLink();
+        inventoryPage.checkFacebookLink();
+        inventoryPage.checkLinkedinLink();
+        inventoryPage.checkLogoSwagIsDisplayed();
+        inventoryPage.checkShoppingCartIsDisplayed();
+        inventoryPage.checkSortContainerIsDisplayed();
 
     }
 
@@ -37,5 +42,9 @@ public class InventoryPageTests extends TestBase {
         inventoryPage.aboutIsDisplayed();
         inventoryPage.logoutIsDisplayed();
         inventoryPage.resetAppStateIsDisplayed();
+        inventoryPage.clickOnButtonCloseSideBarOpenIcon();
+        inventoryPage.allSideBarItemsIsNotDisplayed();
+
+
     }
 }

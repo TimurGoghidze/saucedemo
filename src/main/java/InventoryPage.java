@@ -15,7 +15,11 @@ public class InventoryPage extends BasePage {
     private WebElement productsTitle;
 
     @FindBy(id = "react-burger-menu-btn")
-    private WebElement sideBarButton;
+    private WebElement buttonsSideBar;
+
+    @FindBy(id = "react-burger-cross-btn")
+    private WebElement buttonsCloseSideBar;
+
 
     @FindBy(css = "[class='inventory_item']")
     private List<WebElement> productCards; // коллекция карточек товара
@@ -32,6 +36,12 @@ public class InventoryPage extends BasePage {
     @FindBy(xpath = "//a[@href='https://twitter.com/saucelabs']")
     private WebElement twitterIconLink;
 
+    @FindBy(xpath = "//a[@href='https://www.facebook.com/saucelabs']")
+    private WebElement facebookIconLink;
+
+    @FindBy(xpath = "//a[@href='https://www.linkedin.com/company/sauce-labs/']")
+    private WebElement linkedinLink;
+
     @FindBy(id = "inventory_sidebar_link")
     private WebElement allItems;
 
@@ -44,6 +54,16 @@ public class InventoryPage extends BasePage {
     @FindBy(id = "reset_sidebar_link")
     private WebElement resetAppState;
 
+    @FindBy(css = "[class='app_logo']")
+    private WebElement logoSwag;
+    @FindBy(css = "[class='product_sort_container']")
+    private WebElement sortingContainer;
+
+    @FindBy(css = "[class='shopping_cart_link']")
+    private WebElement shoppingCart;
+
+
+
 
     public InventoryPage(WebDriver driver) {
         super(driver);
@@ -53,7 +73,7 @@ public class InventoryPage extends BasePage {
     }
 
     public void inventoryListShouldBeDisplayed() {
-        assertTrue("Element " + "inventoryList" + "is NOT visible", sideBarButton.isDisplayed());
+        assertTrue("Element " + "inventoryList" + "is NOT visible", buttonsSideBar.isDisplayed());
     }
 
     public void checkAllProductsAreDisplayed() { //проверка списка товаров
@@ -104,7 +124,7 @@ public class InventoryPage extends BasePage {
         assertTrue(twitterIconLink.isDisplayed());
     }
     public void clickOnSideBarOpenIcon() throws InterruptedException {
-        sideBarButton.click();
+        buttonsSideBar.click();
         sleep(1000);
     }
 
@@ -119,5 +139,35 @@ public class InventoryPage extends BasePage {
     }
     public void resetAppStateIsDisplayed(){
         assertTrue(resetAppState.isDisplayed());
+    }
+
+    public void clickOnButtonCloseSideBarOpenIcon() throws InterruptedException {
+        buttonsCloseSideBar.click();
+        sleep(1000);
+    }
+    public void allSideBarItemsIsNotDisplayed(){
+        assertFalse(allItems.isDisplayed());
+        assertFalse(about.isDisplayed());
+        assertFalse(logOut.isDisplayed());
+        assertFalse(resetAppState.isDisplayed());
+    }
+
+    public void checkLogoSwagIsDisplayed(){
+        assertTrue(logoSwag.isDisplayed());
+    }
+
+    public void checkSortContainerIsDisplayed(){
+        assertTrue(sortingContainer.isDisplayed());
+    }
+    public void checkShoppingCartIsDisplayed(){
+        assertTrue(shoppingCart.isDisplayed());
+    }
+
+    public void checkFacebookLink(){
+        assertTrue(facebookIconLink.isDisplayed());
+    }
+
+    public void checkLinkedinLink(){
+        assertTrue(linkedinLink.isDisplayed());
     }
 }

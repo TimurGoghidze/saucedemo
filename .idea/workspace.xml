@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="add InventoryPageTests and test">
+    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="add  tests for InventoryPageTests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InventoryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/InventoryPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InventoryPageTests.java" afterDir="false" />
@@ -60,7 +60,17 @@
       <recent name="D:\2 tel run\Inteleger Idea Project\ui-testing\saucedemo\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InventoryPageTests.sideBar">
+  <component name="RunManager" selected="JUnit.InventoryPageTests.allElementsAreDisplayed">
+    <configuration name="InventoryPageTests.allElementsAreDisplayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saucedemo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="InventoryPageTests" />
+      <option name="METHOD_NAME" value="allElementsAreDisplayed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InventoryPageTests.amountOfProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saucedemo" />
       <option name="PACKAGE_NAME" value="" />
@@ -101,23 +111,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPageTests.loginWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saucedemo" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginPageTests" />
-      <option name="METHOD_NAME" value="loginWithValidData" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InventoryPageTests.allElementsAreDisplayed" />
         <item itemvalue="JUnit.InventoryPageTests.sideBar" />
         <item itemvalue="JUnit.InventoryPageTests.amountOfProducts" />
         <item itemvalue="JUnit.InventoryPageTests.checkLink" />
         <item itemvalue="JUnit.LoginPageTests.allLoginPageElementsAreDisplayed" />
-        <item itemvalue="JUnit.LoginPageTests.loginWithValidData" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679337245480</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add  tests for InventoryPageTests">
+      <created>1679342124616</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679342124616</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -190,6 +197,7 @@
     <MESSAGE value="add BasePage" />
     <MESSAGE value="add optimize LoginPageTests" />
     <MESSAGE value="add InventoryPageTests and test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add InventoryPageTests and test" />
+    <MESSAGE value="add  tests for InventoryPageTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add  tests for InventoryPageTests" />
   </component>
 </project>
