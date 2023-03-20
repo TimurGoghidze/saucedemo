@@ -29,4 +29,5 @@ public class TestBase {
     String lockedOutUsername = "locked_out_user";
 
     String lockedOutPassword = "secret_sauce1";
+
 }

@@ -1,10 +1,6 @@
-import io.qameta.allure.Step;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
@@ -24,6 +20,14 @@ public class LoginPage extends BasePage {
     private WebElement buttonLogin;
     @FindBy(tagName = "h3")
     private WebElement errorMessage;
+
+    @FindBy(className = "login_password")
+    private WebElement listPasswordsForAllUsers;
+
+    @FindBy(id = "login_credentials")
+    private WebElement listAcceptedUserNames;
+
+
 
 //далее надо это проинициализировать -> вывести конструктор этого класса
 //при инициализации передаем драйвер в () драйвер это пульт управления браузером
@@ -53,4 +57,27 @@ public class LoginPage extends BasePage {
     public void errorMessageShouldBeDisplayed() {
         assertTrue(errorMessage.isDisplayed());
     }
+//    public boolean logoIsDisplayed(){
+//        return(logo.isDisplayed());
+//    }
+
+   public boolean fieldUserNameIsDisplayed(){assertTrue((userName.isDisplayed())); // тест на наличие значков на странице
+       return true;
+   }
+
+    public boolean fieldPasswordIsDisplayed(){assertTrue((password.isDisplayed()));
+
+        return true;
+    }
+    public boolean buttonLoginIsDisplayed(){assertTrue((buttonLogin.isDisplayed()));
+        return true;
+    }
+
+    public boolean listPasswordsForAllUsersIsDisplayed(){assertTrue((listPasswordsForAllUsers.isDisplayed()));
+        return true;
+    }
+    public boolean listAcceptedUserNamesIsDisplayed(){assertTrue((listAcceptedUserNames.isDisplayed()));
+        return true;
+    }
+
 }
