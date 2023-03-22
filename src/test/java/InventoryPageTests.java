@@ -1,6 +1,8 @@
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
+import static org.junit.Assert.assertTrue;
+
 public class InventoryPageTests extends TestBase {
 
     @Test
@@ -44,7 +46,6 @@ public class InventoryPageTests extends TestBase {
         inventoryPage.resetAppStateIsDisplayed();
         inventoryPage.clickOnButtonCloseSideBarOpenIcon();
         inventoryPage.allSideBarItemsIsNotDisplayed();
-
-
+        assertTrue(inventoryPage.AllItemsIsDisplayed());
     }
 }

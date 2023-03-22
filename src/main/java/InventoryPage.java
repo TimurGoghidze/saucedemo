@@ -48,6 +48,9 @@ public class InventoryPage extends BasePage {
     @FindBy(id = "about_sidebar_link")
     private WebElement about;
 
+    @FindBy (id ="inventory_sidebar_link")
+    private List<WebElement> itemsName;
+
     @FindBy(id = "logout_sidebar_link")
     private WebElement logOut;
 
@@ -99,7 +102,10 @@ public class InventoryPage extends BasePage {
              productCardsName) {
             assertTrue(productname.isDisplayed());
         }
+    }
 
+    public boolean AllItemsIsDisplayed(){
+        return allElementsOfCollectionAreDisplayed(productCardsName);
     }
 
     public void checkProductCardPictureIsDisplayed(){
@@ -117,6 +123,9 @@ public class InventoryPage extends BasePage {
             assertTrue(addtocart.isDisplayed());
         }
     }
+
+
+
     public void checkButtonAddToCartIsNotEmpty(int expectedAmount) { //метод подсчёта количества отражаемых карточек товара
         assertEquals("Amount of products is not " + expectedAmount, buttonAddToCart.size(), expectedAmount);
     }
