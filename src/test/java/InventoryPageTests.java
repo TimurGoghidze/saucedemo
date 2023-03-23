@@ -1,6 +1,7 @@
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class InventoryPageTests extends TestBase {
@@ -39,13 +40,24 @@ public class InventoryPageTests extends TestBase {
         User user = new User(validUsername, validPassword);
         new LoginPage(driver).login(user).inventoryListShouldBeDisplayed();
         InventoryPage inventoryPage = new InventoryPage(driver);
-        inventoryPage.clickOnSideBarOpenIcon();
+        inventoryPage.openAndClickOnSideBarIcon();
         inventoryPage.allItemsIsDisplayed();
         inventoryPage.aboutIsDisplayed();
         inventoryPage.logoutIsDisplayed();
         inventoryPage.resetAppStateIsDisplayed();
-        inventoryPage.clickOnButtonCloseSideBarOpenIcon();
+        inventoryPage.clickOnButtonCloseSideBar();
         inventoryPage.allSideBarItemsIsNotDisplayed();
         assertTrue(inventoryPage.AllItemsIsDisplayed());
+    }
+
+    @Test
+    public void checkSideBarClose() throws InterruptedException {
+        User user = new User(validUsername, validPassword);
+        new LoginPage(driver).login(user).inventoryListShouldBeDisplayed();
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        inventoryPage.openAndClickOnSideBarIcon();
+        inventoryPage.clickOnButtonCloseSideBar();
+        inventoryPage.checkAllSideBarItemsAreNOTDisplayed(); // проверка на то что при закрытии sideBar items not visible
+
     }
 }

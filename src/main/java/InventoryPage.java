@@ -15,7 +15,7 @@ public class InventoryPage extends BasePage {
     private WebElement productsTitle;
 
     @FindBy(id = "react-burger-menu-btn")
-    private WebElement buttonsSideBar;
+    private WebElement openSideBarButton;
 
     @FindBy(id = "react-burger-cross-btn")
     private WebElement buttonsCloseSideBar;
@@ -51,6 +51,9 @@ public class InventoryPage extends BasePage {
     @FindBy (id ="inventory_sidebar_link")
     private List<WebElement> itemsName;
 
+    @FindBy(css="[class='bm-item menu-item']")
+    private List<WebElement> sideBarItems;
+
     @FindBy(id = "logout_sidebar_link")
     private WebElement logOut;
 
@@ -76,7 +79,7 @@ public class InventoryPage extends BasePage {
     }
 
     public void inventoryListShouldBeDisplayed() {
-        assertTrue("Element " + "inventoryList" + "is NOT visible", buttonsSideBar.isDisplayed());
+        assertTrue("Element " + "inventoryList" + "is NOT visible", openSideBarButton.isDisplayed());
     }
 
     public void checkAllProductsAreDisplayed() { //проверка списка товаров
@@ -84,6 +87,14 @@ public class InventoryPage extends BasePage {
                 productCards) {
             assertTrue(product.isDisplayed());
         }
+    }
+
+    public void checkAllSideBarItemsAreNOTDisplayed() { //проверка списка menu
+        for (WebElement sidebarAllItems :
+                sideBarItems) {
+            assertFalse(sidebarAllItems.isDisplayed());
+        }
+
     }
 
     public void checkAmountOfProducts(int expectedAmount) { //метод подсчёта количества отражаемых карточек товара
@@ -132,8 +143,8 @@ public class InventoryPage extends BasePage {
     public void checkTwitterLink(){
         assertTrue(twitterIconLink.isDisplayed());
     }
-    public void clickOnSideBarOpenIcon() throws InterruptedException {
-        buttonsSideBar.click();
+    public void openAndClickOnSideBarIcon() throws InterruptedException {
+        openSideBarButton.click();
         sleep(1000);
     }
 
@@ -150,7 +161,7 @@ public class InventoryPage extends BasePage {
         assertTrue(resetAppState.isDisplayed());
     }
 
-    public void clickOnButtonCloseSideBarOpenIcon() throws InterruptedException {
+    public void clickOnButtonCloseSideBar() throws InterruptedException {
         buttonsCloseSideBar.click();
         sleep(1000);
     }
