@@ -1,7 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
@@ -28,5 +27,8 @@ public abstract class BasePage {
             }
         }
         return true;
+    }
+    public void refreshPage(){ // method refresh the page
+        driver.navigate().refresh();
     }
 }

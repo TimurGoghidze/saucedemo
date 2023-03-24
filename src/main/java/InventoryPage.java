@@ -2,7 +2,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 import static java.lang.Thread.sleep;
@@ -18,7 +22,7 @@ public class InventoryPage extends BasePage {
     private WebElement openSideBarButton;
 
     @FindBy(id = "react-burger-cross-btn")
-    private WebElement buttonsCloseSideBar;
+    private WebElement closeSideBarButton;
 
 
     @FindBy(css = "[class='inventory_item']")
@@ -43,15 +47,15 @@ public class InventoryPage extends BasePage {
     private WebElement linkedinLink;
 
     @FindBy(id = "inventory_sidebar_link")
-    private WebElement allItems;
+    private WebElement point_All_Items;
 
     @FindBy(id = "about_sidebar_link")
     private WebElement about;
 
-    @FindBy (id ="inventory_sidebar_link")
+    @FindBy(id = "inventory_sidebar_link")
     private List<WebElement> itemsName;
 
-    @FindBy(css="[class='bm-item menu-item']")
+    @FindBy(css = "[class='bm-item menu-item']")
     private List<WebElement> sideBarItems;
 
     @FindBy(id = "logout_sidebar_link")
@@ -65,10 +69,15 @@ public class InventoryPage extends BasePage {
     @FindBy(css = "[class='product_sort_container']")
     private WebElement sortingContainer;
 
-    @FindBy(css = "[class='shopping_cart_link']")
-    private WebElement shoppingCart;
 
+    @FindBy(id = "add-to-cart-sauce-labs-backpack")
+    private WebElement addBackpackToCartButton;
 
+    @FindBy(id = "shopping_cart_container")
+    private WebElement cartIcon;
+
+    // @FindBy(css = "[class='shopping_cart_link']")
+    // private WebElement shoppingCart;
 
 
     public InventoryPage(WebDriver driver) {
@@ -101,7 +110,7 @@ public class InventoryPage extends BasePage {
         assertEquals("Amount of products is not " + expectedAmount, productCards.size(), expectedAmount);
     }
 
-    public void checkProductNameIsDisplayed(){
+    public void checkProductNameIsDisplayed() {
         for (WebElement productname :
                 productCardsName) {
             assertTrue(productname.isDisplayed());
@@ -109,26 +118,28 @@ public class InventoryPage extends BasePage {
     }
 
     public void checkProductNameIsNotEmpty() {
-        for (WebElement productname:
-             productCardsName) {
+        for (WebElement productname :
+                productCardsName) {
             assertTrue(productname.isDisplayed());
         }
     }
 
-    public boolean AllItemsIsDisplayed(){
+    public boolean AllItemsIsDisplayed() {
         return allElementsOfCollectionAreDisplayed(productCardsName);
     }
 
-    public void checkProductCardPictureIsDisplayed(){
+    public void checkProductCardPictureIsDisplayed() {
         for (WebElement picture :
                 productCardsPicture) {
             assertTrue(picture.isDisplayed());
         }
     }
+
     public void checkProductCardPictureIsNotEmpty(int expectedAmount) { //метод подсчёта количества отражаемых карточек товара
         assertEquals("Amount of products is not " + expectedAmount, productCardsPicture.size(), expectedAmount);
     }
-    public void checkButtonAddToCartIsDisplayed(){
+
+    public void checkButtonAddToCartIsDisplayed() {
         for (WebElement addtocart :
                 buttonAddToCart) {
             assertTrue(addtocart.isDisplayed());
@@ -136,58 +147,89 @@ public class InventoryPage extends BasePage {
     }
 
 
-
     public void checkButtonAddToCartIsNotEmpty(int expectedAmount) { //метод подсчёта количества отражаемых карточек товара
         assertEquals("Amount of products is not " + expectedAmount, buttonAddToCart.size(), expectedAmount);
     }
-    public void checkTwitterLink(){
+
+    public void checkTwitterLink() {
         assertTrue(twitterIconLink.isDisplayed());
     }
-    public void openAndClickOnSideBarIcon() throws InterruptedException {
+
+    public void openAndClickOnSideBarIcon() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // лучше добавить чтобы дожидался появления
+        wait.until(ExpectedConditions.elementToBeClickable(openSideBarButton));
         openSideBarButton.click();
-        sleep(1000);
     }
 
-    public void allItemsIsDisplayed(){
-        assertTrue(allItems.isDisplayed());
+    public void allItemsIsDisplayed() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        wait.until(ExpectedConditions.visibilityOf(point_All_Items));
+        assertTrue(point_All_Items.isDisplayed());
+        //assertTrue(allItems.isDisplayed());
     }
-    public void aboutIsDisplayed(){
+
+    public void aboutIsDisplayed() {
         assertTrue(about.isDisplayed());
     }
-    public void logoutIsDisplayed(){
+
+    public void logoutIsDisplayed() {
         assertTrue(logOut.isDisplayed());
     }
-    public void resetAppStateIsDisplayed(){
+
+    public void resetAppStateIsDisplayed() {
         assertTrue(resetAppState.isDisplayed());
     }
 
-    public void clickOnButtonCloseSideBar() throws InterruptedException {
-        buttonsCloseSideBar.click();
-        sleep(1000);
+    public void clickOnButtonCloseSideBar() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        wait.until(ExpectedConditions.visibilityOf(closeSideBarButton));
+        closeSideBarButton.click();
     }
-    public void allSideBarItemsIsNotDisplayed(){
-        assertFalse(allItems.isDisplayed());
+
+    public void allSideBarItemsIsNotDisplayed() {
+        assertFalse(point_All_Items.isDisplayed());
         assertFalse(about.isDisplayed());
         assertFalse(logOut.isDisplayed());
         assertFalse(resetAppState.isDisplayed());
     }
 
-    public void checkLogoSwagIsDisplayed(){
+    public void checkLogoSwagIsDisplayed() {
         assertTrue(logoSwag.isDisplayed());
     }
 
-    public void checkSortContainerIsDisplayed(){
+    public void checkSortContainerIsDisplayed() {
         assertTrue(sortingContainer.isDisplayed());
     }
-    public void checkShoppingCartIsDisplayed(){
-        assertTrue(shoppingCart.isDisplayed());
+
+    public void checkShoppingCartIsDisplayed() {
+        assertTrue(cartIcon.isDisplayed());
     }
 
-    public void checkFacebookLink(){
+    public void checkFacebookLink() {
         assertTrue(facebookIconLink.isDisplayed());
     }
 
-    public void checkLinkedinLink(){
+    public void checkLinkedinLink() {
         assertTrue(linkedinLink.isDisplayed());
     }
+
+    public void clickOnAddToCartBackpack() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(addBackpackToCartButton));
+        addBackpackToCartButton.click();
+
+    }
+
+    public void clickOnTheCartIcon() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // лучше добавить чтобы дожидался появления
+        wait.until(ExpectedConditions.elementToBeClickable(cartIcon));
+        cartIcon.click();
+    }
+
+    public void clickOnResetAppState() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // лучше добавить чтобы дожидался появления
+        wait.until(ExpectedConditions.elementToBeClickable(resetAppState));
+        resetAppState.click();
+    }
+
 }

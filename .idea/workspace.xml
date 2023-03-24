@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="add  tests for InventoryPageTests + basetest +1method">
+    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="add  +1 test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CartPageTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InventoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InventoryPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InventoryPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +65,17 @@
       <recent name="D:\2 tel run\Inteleger Idea Project\ui-testing\saucedemo\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InventoryPageTests.checkSideBarClose">
+  <component name="RunManager" selected="JUnit.CartPageTests.cardPageIsOpen">
+    <configuration name="CartPageTests.cardPageIsOpen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saucedemo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CartPageTests" />
+      <option name="METHOD_NAME" value="cardPageIsOpen" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InventoryPageTests.allElementsAreDisplayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saucedemo" />
       <option name="PACKAGE_NAME" value="" />
@@ -79,16 +91,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="InventoryPageTests" />
       <option name="METHOD_NAME" value="amountOfProducts" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InventoryPageTests.checkLink" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saucedemo" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InventoryPageTests" />
-      <option name="METHOD_NAME" value="checkLink" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CartPageTests.cardPageIsOpen" />
         <item itemvalue="JUnit.InventoryPageTests.checkSideBarClose" />
         <item itemvalue="JUnit.InventoryPageTests.sideBar" />
         <item itemvalue="JUnit.InventoryPageTests.allElementsAreDisplayed" />
         <item itemvalue="JUnit.InventoryPageTests.amountOfProducts" />
-        <item itemvalue="JUnit.InventoryPageTests.checkLink" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679445967271</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add  +1 test">
+      <created>1679529873350</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679529873350</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -216,6 +225,7 @@
     <MESSAGE value="add InventoryPageTests and test" />
     <MESSAGE value="add  tests for InventoryPageTests" />
     <MESSAGE value="add  tests for InventoryPageTests + basetest +1method" />
-    <option name="LAST_COMMIT_MESSAGE" value="add  tests for InventoryPageTests + basetest +1method" />
+    <MESSAGE value="add  +1 test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add  +1 test" />
   </component>
 </project>
