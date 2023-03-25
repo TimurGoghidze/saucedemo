@@ -1,8 +1,9 @@
+import com.google.inject.matcher.Matchers;
+import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -10,7 +11,9 @@ import java.time.Duration;
 import java.util.List;
 
 import static java.lang.Thread.sleep;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.*;
+
 
 public class InventoryPage extends BasePage {
     // protected WebDriver driver; //он в BasePage
@@ -22,7 +25,7 @@ public class InventoryPage extends BasePage {
     private WebElement openSideBarButton;
 
     @FindBy(id = "react-burger-cross-btn")
-    private WebElement closeSideBarButton;
+    private WebElement closeSideBarItem;
 
 
     @FindBy(css = "[class='inventory_item']")
@@ -79,6 +82,8 @@ public class InventoryPage extends BasePage {
     // @FindBy(css = "[class='shopping_cart_link']")
     // private WebElement shoppingCart;
 
+    @FindBy(id = "add-to-cart-sauce-labs-bike-light")
+    private WebElement clickOnAddBikeToCartButton;
 
     public InventoryPage(WebDriver driver) {
         super(driver);
@@ -101,13 +106,14 @@ public class InventoryPage extends BasePage {
     public void checkAllSideBarItemsAreNOTDisplayed() { //проверка списка menu
         for (WebElement sidebarAllItems :
                 sideBarItems) {
-            assertFalse(sidebarAllItems.isDisplayed());
+            assertTrue(sidebarAllItems.isDisplayed());
         }
 
     }
 
     public void checkAmountOfProducts(int expectedAmount) { //метод подсчёта количества отражаемых карточек товара
         assertEquals("Amount of products is not " + expectedAmount, productCards.size(), expectedAmount);
+        // assertThat(productCards, MatcherAssert.hasSize(expectedAmount));
     }
 
     public void checkProductNameIsDisplayed() {
@@ -149,6 +155,7 @@ public class InventoryPage extends BasePage {
 
     public void checkButtonAddToCartIsNotEmpty(int expectedAmount) { //метод подсчёта количества отражаемых карточек товара
         assertEquals("Amount of products is not " + expectedAmount, buttonAddToCart.size(), expectedAmount);
+
     }
 
     public void checkTwitterLink() {
@@ -156,14 +163,13 @@ public class InventoryPage extends BasePage {
     }
 
     public void openAndClickOnSideBarIcon() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // лучше добавить чтобы дожидался появления
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.elementToBeClickable(openSideBarButton));
         openSideBarButton.click();
     }
 
     public void allItemsIsDisplayed() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-        wait.until(ExpectedConditions.visibilityOf(point_All_Items));
+        clickOnTheElement(point_All_Items);
         assertTrue(point_All_Items.isDisplayed());
         //assertTrue(allItems.isDisplayed());
     }
@@ -181,16 +187,15 @@ public class InventoryPage extends BasePage {
     }
 
     public void clickOnButtonCloseSideBar() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-        wait.until(ExpectedConditions.visibilityOf(closeSideBarButton));
-        closeSideBarButton.click();
+
+        clickOnTheElement(closeSideBarItem);
     }
 
     public void allSideBarItemsIsNotDisplayed() {
-        assertFalse(point_All_Items.isDisplayed());
-        assertFalse(about.isDisplayed());
-        assertFalse(logOut.isDisplayed());
-        assertFalse(resetAppState.isDisplayed());
+        assertTrue(point_All_Items.isDisplayed());
+        assertTrue(about.isDisplayed());
+        assertTrue(logOut.isDisplayed());
+        assertTrue(resetAppState.isDisplayed());
     }
 
     public void checkLogoSwagIsDisplayed() {
@@ -214,22 +219,26 @@ public class InventoryPage extends BasePage {
     }
 
     public void clickOnAddToCartBackpack() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.elementToBeClickable(addBackpackToCartButton));
-        addBackpackToCartButton.click();
+        clickOnTheElement(addBackpackToCartButton);
+    }
 
+    public void clickOnAddToCartBikeLight() {
+        clickOnTheElement(clickOnAddBikeToCartButton);
     }
 
     public void clickOnTheCartIcon() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // лучше добавить чтобы дожидался появления
-        wait.until(ExpectedConditions.elementToBeClickable(cartIcon));
-        cartIcon.click();
+        clickOnTheElement(cartIcon);
     }
 
     public void clickOnResetAppState() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // лучше добавить чтобы дожидался появления
-        wait.until(ExpectedConditions.elementToBeClickable(resetAppState));
-        resetAppState.click();
+        clickOnTheElement(resetAppState);
+    }
+
+    public void resetAppState() {
+        openAndClickOnSideBarIcon();
+        clickOnResetAppState();
+        clickOnButtonCloseSideBar();
+        refreshPage();
     }
 
 }

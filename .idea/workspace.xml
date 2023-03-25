@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="add  +1 test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CartPageTests.java" afterDir="false" />
+    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="add  CartPage + Tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CheckoutStepOnePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CheckoutStepTwoPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CheckoutTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InventoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CartPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InventoryPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InventoryPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +70,17 @@
       <recent name="D:\2 tel run\Inteleger Idea Project\ui-testing\saucedemo\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CartPageTests.cardPageIsOpen">
+  <component name="RunManager" selected="JUnit.CheckoutTests.checkQuantityOfProducts">
+    <configuration name="CartPageTests.addSeveralItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="saucedemo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CartPageTests" />
+      <option name="METHOD_NAME" value="addSeveralItems" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CartPageTests.cardPageIsOpen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saucedemo" />
       <option name="PACKAGE_NAME" value="" />
@@ -76,41 +91,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryPageTests.allElementsAreDisplayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckoutTests.checkQuantityOfProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saucedemo" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InventoryPageTests" />
-      <option name="METHOD_NAME" value="allElementsAreDisplayed" />
+      <option name="MAIN_CLASS_NAME" value="CheckoutTests" />
+      <option name="METHOD_NAME" value="checkQuantityOfProducts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryPageTests.amountOfProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginPageTests.allLoginPageElementsAreDisplayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saucedemo" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InventoryPageTests" />
-      <option name="METHOD_NAME" value="amountOfProducts" />
+      <option name="MAIN_CLASS_NAME" value="LoginPageTests" />
+      <option name="METHOD_NAME" value="allLoginPageElementsAreDisplayed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryPageTests.checkSideBarClose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginPageTests.loginLockedOutUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="saucedemo" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InventoryPageTests" />
-      <option name="METHOD_NAME" value="checkSideBarClose" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InventoryPageTests.sideBar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saucedemo" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InventoryPageTests" />
-      <option name="METHOD_NAME" value="sideBar" />
+      <option name="MAIN_CLASS_NAME" value="LoginPageTests" />
+      <option name="METHOD_NAME" value="loginLockedOutUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckoutTests.checkQuantityOfProducts" />
+        <item itemvalue="JUnit.CartPageTests.addSeveralItems" />
         <item itemvalue="JUnit.CartPageTests.cardPageIsOpen" />
-        <item itemvalue="JUnit.InventoryPageTests.checkSideBarClose" />
-        <item itemvalue="JUnit.InventoryPageTests.sideBar" />
-        <item itemvalue="JUnit.InventoryPageTests.allElementsAreDisplayed" />
-        <item itemvalue="JUnit.InventoryPageTests.amountOfProducts" />
+        <item itemvalue="JUnit.LoginPageTests.allLoginPageElementsAreDisplayed" />
+        <item itemvalue="JUnit.LoginPageTests.loginLockedOutUser" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679529873350</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add  CartPage + Tests">
+      <created>1679660047397</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679660047397</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -226,6 +238,7 @@
     <MESSAGE value="add  tests for InventoryPageTests" />
     <MESSAGE value="add  tests for InventoryPageTests + basetest +1method" />
     <MESSAGE value="add  +1 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add  +1 test" />
+    <MESSAGE value="add  CartPage + Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add  CartPage + Tests" />
   </component>
 </project>

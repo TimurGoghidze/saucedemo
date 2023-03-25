@@ -79,5 +79,7 @@ public class LoginPage extends BasePage {
     public boolean listAcceptedUserNamesIsDisplayed(){assertTrue((listAcceptedUserNames.isDisplayed()));
         return true;
     }
+public void loginWithValidData(){
 
+}
 }
