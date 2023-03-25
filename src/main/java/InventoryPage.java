@@ -1,17 +1,14 @@
-import com.google.inject.matcher.Matchers;
-import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
 
-import static java.lang.Thread.sleep;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static net.bytebuddy.matcher.ElementMatchers.is;
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 
@@ -176,7 +173,12 @@ public class InventoryPage extends BasePage {
 
     public void aboutIsDisplayed() {
         assertTrue(about.isDisplayed());
+       // assertThat(about.isDisplayed(),is(true));
+       // assertThat(about.getAttribute("href"),startsWith("https://"));
+       // assertThat(about.getText(),allOf(startsWith("https://"),containsString("sausedemo"));
     }
+
+
 
     public void logoutIsDisplayed() {
         assertTrue(logOut.isDisplayed());
