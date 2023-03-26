@@ -29,4 +29,23 @@ public class CartPageTests extends TestBase {
         CartPage cartPage = new CartPage(driver);
         assertTrue(cartPage.checkProductCardQuantity(2));
     }
+    @Test
+    public void cartIsEmpty1(){ //пуста ли корзина first variant
+        User user = new User(validUsername, validPassword);
+        new LoginPage(driver).login(user).inventoryListShouldBeDisplayed();
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        inventoryPage.clickOnTheCartIcon();
+        CartPage cartPage = new CartPage(driver);
+        cartPage.cartIsEmpty1();
+    }
+    @Test
+    public void cartIsEmpty2(){ //second variant
+        User user = new User(validUsername, validPassword);
+        new LoginPage(driver).login(user);
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        inventoryPage.resetAppState();
+        inventoryPage.clickOnTheCartIcon();
+        CartPage cartPage = new CartPage(driver);
+        assertTrue(cartPage.cartIsEmpty2());
+    }
 }

@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="add  checkout +tests">
+    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="update  pom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CheckoutStepTwoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckoutStepTwoPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InventoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CheckoutStepOnePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckoutStepOnePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CartPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartPageTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CheckoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckoutTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InventoryPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InventoryPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,29 +68,27 @@
       <recent name="D:\2 tel run\Inteleger Idea Project\ui-testing\saucedemo\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CheckoutTests.checkQuantityOfProducts">
-    <configuration name="CartPageTests.addSeveralItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saucedemo" />
+  <component name="RunManager" selected="JUnit.CheckoutTests">
+    <configuration name="CartPageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="orangehrmlive-selenide" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CartPageTests" />
-      <option name="METHOD_NAME" value="addSeveralItems" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartPageTests.cardPageIsOpen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saucedemo" />
+    <configuration name="CheckoutTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="orangehrmlive-selenide" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CartPageTests" />
-      <option name="METHOD_NAME" value="cardPageIsOpen" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="CheckoutTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="CheckoutTests.checkQuantityOfProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saucedemo" />
+      <module name="orangehrmlive-selenide" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CheckoutTests" />
       <option name="METHOD_NAME" value="checkQuantityOfProducts" />
@@ -97,33 +97,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPageTests.allLoginPageElementsAreDisplayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saucedemo" />
+    <configuration name="InventoryPageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="orangehrmlive-selenide" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginPageTests" />
-      <option name="METHOD_NAME" value="allLoginPageElementsAreDisplayed" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="InventoryPageTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPageTests.loginLockedOutUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="saucedemo" />
+    <configuration name="LoginPageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="orangehrmlive-selenide" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LoginPageTests" />
-      <option name="METHOD_NAME" value="loginLockedOutUser" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckoutTests" />
+        <item itemvalue="JUnit.LoginPageTests" />
+        <item itemvalue="JUnit.InventoryPageTests" />
         <item itemvalue="JUnit.CheckoutTests.checkQuantityOfProducts" />
-        <item itemvalue="JUnit.CartPageTests.addSeveralItems" />
-        <item itemvalue="JUnit.CartPageTests.cardPageIsOpen" />
-        <item itemvalue="JUnit.LoginPageTests.allLoginPageElementsAreDisplayed" />
-        <item itemvalue="JUnit.LoginPageTests.loginLockedOutUser" />
+        <item itemvalue="JUnit.CartPageTests" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679775298050</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update  pom">
+      <created>1679780962253</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1679780962253</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -243,6 +248,7 @@
     <MESSAGE value="add  +1 test" />
     <MESSAGE value="add  CartPage + Tests" />
     <MESSAGE value="add  checkout +tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="add  checkout +tests" />
+    <MESSAGE value="update  pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="update  pom" />
   </component>
 </project>

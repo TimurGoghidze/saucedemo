@@ -5,40 +5,52 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>saucedemo</artifactId>
+    <artifactId>orangehrmlive-selenide</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.java.version>17</project.java.version>
-        <selenide.version>6.12.3</selenide.version>
         <aspectj.version>1.8.10</aspectj.version>
-
-        <allure.maven.version>2.10.00</allure.maven.version>
-        <maven.surefire>2.22.2</maven.surefire>
-        <maven.compiler>3.7.0</maven.compiler>
-        <allure.results.directory>allure-results</allure.results.directory>
+        <allure.version>2.21.0</allure.version>
     </properties>
-
-
     <dependencies>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-maven</artifactId>
-            <version>2.12.0</version>
-        </dependency>
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>${selenide.version}</version>
+            <version>6.11.2</version>
         </dependency>
         <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-junit4</artifactId>
-
-            <version>2.21.0</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+        <!--     <dependency>
+                 <groupId>org.junit.jupiter</groupId>
+                 <artifactId>junit-jupiter-engine</artifactId>
+                 <version>5.9.2</version>
+                 <scope>test</scope>
+             </dependency>
+             &lt;!&ndash; https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api &ndash;&gt;
+             <dependency>
+                 <groupId>org.junit.jupiter</groupId>
+                 <artifactId>junit-jupiter-api</artifactId>
+                 <version>5.9.2</version>
+                 <scope>test</scope>
+             </dependency>
+             &lt;!&ndash; https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine &ndash;&gt;
+             <dependency>
+                 <groupId>org.junit.vintage</groupId>
+                 <artifactId>junit-vintage-engine</artifactId>
+                 <version>5.9.2</version>
+                 <scope>test</scope>
+             </dependency>-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.6</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -48,89 +60,47 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-selenide</artifactId>
-
-            <version>2.21.0</version>
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.7.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-java-commons</artifactId>
-            <version>2.21.0</version>
-            <scope>compile</scope>
-        </dependency>
-
-
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>2.0.6</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.26</version>
+            <version>1.18.24</version>
             <scope>provided</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-selenide -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-selenide</artifactId>
+            <version>2.20.1</version>
+        </dependency>
+        <!--       <dependency>
+                   <groupId>org.apache.logging.log4j</groupId>
+                   <artifactId>log4j-api</artifactId>
+                   <version>2.13.0</version>
+               </dependency>
+               <dependency>
+                   <groupId>org.apache.logging.log4j</groupId>
+                   <artifactId>log4j-core</artifactId>
+                   <version>2.13.0</version>
+               </dependency>-->
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <!--        <dependency>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-simple</artifactId>
+                    <version>2.0.6</version>
+                    <scope>test</scope>
+                </dependency>-->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit4</artifactId>
+            <version>2.21.0</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
-
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler}</version>
-                <configuration>
-                    <source>${project.java.version}</source>
-                    <target>${project.java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire}</version>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <argLine>
-                        --add-opens java.base/java.lang=ALL-UNNAMED
-                        --add-opens java.base/java.util=ALL-UNNAMED
-                        --add-opens java.base/java.lang.reflect=ALL-UNNAMED
-                        --add-opens java.base/java.text=ALL-UNNAMED
-                        --add-opens java.desktop/java.awt.font=ALL-UNNAMED
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-
-                    </argLine>
-                    <systemProperties>
-                        <property>
-                            <name>allure.results.directory</name>
-                            <value>${project.build.directory}/allure-results</value>
-                        </property>
-                    </systemProperties>
-                    <!--                   <parallel>all</parallel>
-                                       <threadCount>4</threadCount>
-                                       <redirectTestOutputToFile>false</redirectTestOutputToFile>-->
-
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjweaver</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
@@ -141,12 +111,38 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>3.0.0</version>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                    <systemProperties>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>target/allure-results</value>
+                        </property>
+                    </systemProperties>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>io.qameta.allure.junit4.AllureJunit4</value>
+                        </property>
+                    </properties>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
-
     </build>
+
+
 
 
 </project>
