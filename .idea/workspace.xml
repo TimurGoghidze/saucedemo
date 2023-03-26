@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="update  pom">
+    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="update  pom and allure work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CheckoutStepOnePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckoutStepOnePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CartPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartPageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CheckoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckoutTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InventoryPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InventoryPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,7 @@
       <recent name="D:\2 tel run\Inteleger Idea Project\ui-testing\saucedemo\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CheckoutTests">
+  <component name="RunManager" selected="JUnit.CheckoutTests.checkQuantityOfProducts">
     <configuration name="CartPageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="orangehrmlive-selenide" />
       <option name="PACKAGE_NAME" value="" />
@@ -117,10 +113,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckoutTests.checkQuantityOfProducts" />
         <item itemvalue="JUnit.CheckoutTests" />
         <item itemvalue="JUnit.LoginPageTests" />
         <item itemvalue="JUnit.InventoryPageTests" />
-        <item itemvalue="JUnit.CheckoutTests.checkQuantityOfProducts" />
         <item itemvalue="JUnit.CartPageTests" />
       </list>
     </recent_temporary>
@@ -232,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679780962253</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update  pom and allure work">
+      <created>1679858639793</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679858639793</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -249,6 +252,7 @@
     <MESSAGE value="add  CartPage + Tests" />
     <MESSAGE value="add  checkout +tests" />
     <MESSAGE value="update  pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="update  pom" />
+    <MESSAGE value="update  pom and allure work" />
+    <option name="LAST_COMMIT_MESSAGE" value="update  pom and allure work" />
   </component>
 </project>
