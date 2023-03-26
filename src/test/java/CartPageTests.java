@@ -1,3 +1,4 @@
+import io.qameta.allure.Story;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -29,7 +30,7 @@ public class CartPageTests extends TestBase {
         CartPage cartPage = new CartPage(driver);
         assertTrue(cartPage.checkProductCardQuantity(2));
     }
-    @Test
+    @Test @Story("Check that cart is empty option first")
     public void cartIsEmpty1(){ //пуста ли корзина first variant
         User user = new User(validUsername, validPassword);
         new LoginPage(driver).login(user).inventoryListShouldBeDisplayed();
@@ -38,7 +39,7 @@ public class CartPageTests extends TestBase {
         CartPage cartPage = new CartPage(driver);
         cartPage.cartIsEmpty1();
     }
-    @Test
+    @Test @Story("Check that cart is empty option second")
     public void cartIsEmpty2(){ //second variant
         User user = new User(validUsername, validPassword);
         new LoginPage(driver).login(user);

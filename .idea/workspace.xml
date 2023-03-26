@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="update  pom and allure work">
+    <list default="true" id="d73178ea-fc64-40f9-b324-8a4a3330a780" name="Changes" comment="update  pom and delete allure.properties">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CartPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679858639793</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update  pom and delete allure.properties">
+      <created>1679862489979</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1679862489979</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -253,6 +260,7 @@
     <MESSAGE value="add  checkout +tests" />
     <MESSAGE value="update  pom" />
     <MESSAGE value="update  pom and allure work" />
-    <option name="LAST_COMMIT_MESSAGE" value="update  pom and allure work" />
+    <MESSAGE value="update  pom and delete allure.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="update  pom and delete allure.properties" />
   </component>
 </project>

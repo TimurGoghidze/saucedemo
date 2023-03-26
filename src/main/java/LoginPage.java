@@ -1,3 +1,4 @@
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,7 +40,7 @@ public class LoginPage extends BasePage {
         // PageFactory.initElements(driver, this); // передаём то, что здесь есть = constructor без неё тесты завалятся
     }
 
-    //@Step ("Filling in username, password and push the Login button")
+    @Step("Filling in username, password and push the Login button")
     public InventoryPage login(User user) { // InventoryPage  вместо void чтобы можно было образовать цепочку
         enterTextToElement(user.getName(), userName);
         enterTextToElement(user.getPassword(), password);
